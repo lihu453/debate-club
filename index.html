@@ -257,6 +257,25 @@
     .principle p, .principle li { font-size: 13px; line-height: 1.7; }
     .principle p { margin: 0 0 10px; }
     .principle ul { margin: 8px 0 0; padding-left: 19px; }
+    .month-table-wrap { margin: 18px 0 24px; overflow-x: auto; }
+    .month-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: rgba(255,255,255,.45);
+      font: 12px/1.45 var(--sans);
+      text-align: left;
+    }
+    .month-table caption {
+      padding: 0 0 8px;
+      color: var(--muted);
+      font: 700 11px var(--sans);
+      letter-spacing: .06em;
+      text-align: left;
+    }
+    .month-table th, .month-table td { padding: 9px 12px; border: 1px solid var(--line); }
+    .month-table thead th { background: #e8e7e1; font-weight: 700; }
+    .month-table tbody th { font-weight: 500; }
+    .month-table tbody td { color: var(--accent); font-weight: 700; }
     .calculation-detail {
       margin: -5px 0 13px;
       color: var(--muted);
@@ -424,14 +443,28 @@
           <h2 id="principle-title">The principle: compress elapsed days into a remainder</h2>
           <p>Weekdays repeat every 7 days. So instead of memorizing every date, count the days since a reference date and take the remainder after dividing by 7.</p>
         </header>
+        <div class="month-table-wrap">
+          <table class="month-table">
+            <caption>Month codes (common year)</caption>
+            <thead>
+              <tr><th scope="col">Month</th><th scope="col">Code</th><th scope="col">Month</th><th scope="col">Code</th><th scope="col">Month</th><th scope="col">Code</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">January</th><td>0</td><th scope="row">February</th><td>3</td><th scope="row">March</th><td>3</td></tr>
+              <tr><th scope="row">April</th><td>6</td><th scope="row">May</th><td>1</td><th scope="row">June</th><td>4</td></tr>
+              <tr><th scope="row">July</th><td>6</td><th scope="row">August</th><td>2</td><th scope="row">September</th><td>5</td></tr>
+              <tr><th scope="row">October</th><td>0</td><th scope="row">November</th><td>3</td><th scope="row">December</th><td>5</td></tr>
+            </tbody>
+          </table>
+        </div>
         <div class="principle-grid">
           <div>
             <h3>Count forward from January 1, year 1</h3>
             <p>In the Gregorian calendar, this reference date is a Monday. For a target date in year <var>y</var>, month <var>m</var>, and day <var>d</var>, the number of days in all completed years is:</p>
             <code class="formula">Y = 365(y − 1) + ⌊(y − 1)/4⌋ − ⌊(y − 1)/100⌋ + ⌊(y − 1)/400⌋</code>
-            <p>Add <var>M</var>, the number of days in the completed months before the target month; the leap-year adjustment <var>L</var> (1 if it is a leap year and the month is after February, otherwise 0); and the <var>d − 1</var> days already elapsed in the current month:</p>
-            <code class="formula">N = Y + M + L + (d − 1)<br>Weekday index = (N + 1) mod 7</code>
-            <p>Here, Sunday is 0, Monday is 1, and so on. We add 1 because the reference date is a Monday, not a Sunday.</p>
+            <p>Instead of counting every day before the month, use its month code <var>C</var> from the table—the number of days before that month, reduced modulo 7. Add the leap-year adjustment <var>L</var> (1 in a leap year after February, otherwise 0) and the day of the month:</p>
+            <code class="formula">Weekday index = (Y + C + L + d) mod 7</code>
+            <p>Here, Sunday is 0, Monday is 1, and so on. The formula includes a +1 offset because January 1, year 1 is a Monday, and uses <var>d</var> rather than <var>d − 1</var>.</p>
           </div>
           <aside class="formula-card" aria-label="Worked example">
             <h3>Example: January 4, 2025</h3>
@@ -480,7 +513,7 @@
     const result = document.querySelector("#date-result");
     const calculationDetail = document.querySelector("#calculation-detail");
     const weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
-    const daysBeforeMonth = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
+    const monthCodes = [0, 3, 3, 6, 1, 4, 6, 2, 5, 0, 3, 5];
     document.querySelector("#date-form").addEventListener("submit", (event) => {
       event.preventDefault();
       if (!dateInput.value) {
@@ -500,10 +533,11 @@
       const leapYear = year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
       const yearDays = 365 * previousYear + Math.floor(previousYear / 4) - Math.floor(previousYear / 100) + Math.floor(previousYear / 400);
       const leapAdjustment = leapYear && month > 2 ? 1 : 0;
-      const elapsedDays = yearDays + daysBeforeMonth[month - 1] + leapAdjustment + day - 1;
-      const weekdayIndex = (elapsedDays + 1) % 7;
+      const monthCode = monthCodes[month - 1];
+      const elapsedDays = yearDays + monthCode + leapAdjustment + day;
+      const weekdayIndex = elapsedDays % 7;
       result.textContent = `${new Intl.DateTimeFormat("en-US", { dateStyle: "long" }).format(date)} falls on a ${weekdays[weekdayIndex]}.`;
-      calculationDetail.textContent = `Elapsed days N = ${elapsedDays}; (${elapsedDays} + 1) mod 7 = ${weekdayIndex}`;
+      calculationDetail.textContent = `Y ${yearDays} + month code ${monthCode} + leap adjustment ${leapAdjustment} + day ${day} = ${elapsedDays}; mod 7 = ${weekdayIndex}`;
     });
 
     const shareDialog = document.querySelector("#share-dialog");
