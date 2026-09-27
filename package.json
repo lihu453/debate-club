@@ -1,0 +1,20 @@
+{
+  "name": "debate-club-site",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Responsive debate club website with an Express and SQLite signup API",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.2.0",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.1.0",
+    "helmet": "^8.1.0"
+  }
+}
