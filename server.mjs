@@ -82,6 +82,11 @@ export function createApp(database, { signupLimit = 5, signupWindowMs = 15 * 60 
     message: { error: "提交次数过多，请稍后再试。" }
   });
 
+  app.use("/api", (_request, response, next) => {
+    response.set("Cache-Control", "no-store");
+    next();
+  });
+
   app.get(["/", "/index.html"], (_request, response) => {
     response.sendFile(join(projectDirectory, "index.html"));
   });
@@ -99,8 +104,8 @@ export function createApp(database, { signupLimit = 5, signupWindowMs = 15 * 60 
         INSERT INTO signups (full_name, grade, phone, position, introduction)
         VALUES (@fullName, @grade, @phone, @position, @introduction)
       `);
-      const result = insertSignup.run(validation.value);
-      return response.status(201).json({ message: "报名信息已提交。", id: Number(result.lastInsertRowid) });
+      insertSignup.run(validation.value);
+      return response.status(201).json({ message: "报名信息已提交。" });
     } catch (error) {
       console.error("报名信息保存失败。", error instanceof Error ? error.name : "UnknownError");
       return response.status(503).json({ error: "报名信息暂时无法保存，请稍后重试。" });
