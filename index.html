@@ -1,15 +1,15 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="辩论社——以理性思辨、清晰表达和彼此倾听，探索观点的力量。了解社团、近期活动与招新信息。">
+  <meta name="description" content="Debate Club — explore the power of ideas through rigorous thinking, clear expression, and listening to one another. Learn about the club, upcoming events, and recruitment.">
   <meta name="theme-color" content="#101b2b">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="辩论社 | 让观点交锋，让思想生长">
-  <meta property="og:description" content="了解辩论社的活动、辩论知识与招新信息。学校及社团资料待补充。">
-  <meta property="og:image" content="【替换为经授权的社团宣传图 URL】">
-  <title>辩论社 | 让观点交锋，让思想生长</title>
+  <meta property="og:title" content="Debate Club | Where ideas clash and thoughts grow">
+  <meta property="og:description" content="Learn about Debate Club events, debate knowledge, and recruitment. School and club details to be added.">
+  <meta property="og:image" content="[Replace with an authorized club promo image URL]">
+  <title>Debate Club | Where ideas clash and thoughts grow</title>
   <style>
     :root {
       color-scheme: light;
@@ -29,7 +29,7 @@
       --radius: 18px;
       --page-width: 1160px;
       --section-space: clamp(4.5rem, 9vw, 7.5rem);
-      font-family: "Noto Sans SC", "Microsoft YaHei", system-ui, sans-serif;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
       scroll-behavior: smooth;
       scroll-padding-top: 5.5rem;
     }
@@ -55,7 +55,7 @@
     .eyebrow::before { width: 1.6rem; height: 1px; background: currentColor; content: ""; }
     .section-heading { max-width: 680px; margin-bottom: 2.7rem; }
     .section-heading h2 {
-      margin: .5rem 0 .8rem; color: var(--navy); font-family: Georgia, "Noto Serif SC", serif;
+      margin: .5rem 0 .8rem; color: var(--navy); font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(2rem, 5vw, 3.5rem); letter-spacing: -.04em; line-height: 1.17;
     }
     .section-heading p { max-width: 580px; margin: 0; color: var(--ink-soft); }
@@ -71,7 +71,7 @@
     .button--outline:hover { border-color: var(--gold); background: rgb(255 255 255 / 8%); }
     .icon { width: 1.2rem; height: 1.2rem; flex: none; }
 
-    /* 顶部导航：桌面端锚点菜单，窄屏切换为可访问的展开菜单。 */
+    /* Top navigation: anchor menu on desktop, switching to an accessible expandable menu on narrow screens. */
     .site-header {
       position: sticky; z-index: 20; top: 0; border-bottom: 1px solid rgb(255 255 255 / 9%);
       background: rgb(16 27 43 / 97%); color: var(--white); backdrop-filter: blur(12px);
@@ -95,7 +95,7 @@
     .menu-toggle { display: none; border-radius: 5px; }
     .nav-join { min-height: 40px; padding: .45rem .85rem; font-size: .83rem; }
 
-    /* 首屏的天平式图形为纯 CSS 装饰，不依赖外部图片或图标库。 */
+    /* The hero balance graphic is pure CSS decoration and relies on no external images or icon libraries. */
     .hero {
       position: relative; overflow: hidden; min-height: min(760px, calc(100svh - 76px));
       display: grid; align-items: center; background:
@@ -112,7 +112,7 @@
     .hero-copy { max-width: 680px; }
     .hero .eyebrow { color: var(--gold); }
     .hero h1 {
-      margin: 1rem 0 1.1rem; font-family: Georgia, "Noto Serif SC", serif;
+      margin: 1rem 0 1.1rem; font-family: Georgia, "Times New Roman", serif;
       font-size: clamp(3.2rem, 8vw, 6.8rem); letter-spacing: -.055em; line-height: 1.02;
     }
     .hero h1 span { display: block; color: var(--gold); font-size: .37em; letter-spacing: .12em; }
@@ -144,7 +144,7 @@
       box-shadow: var(--shadow);
     }
     .about-quote .quote-mark { color: var(--gold); font-family: Georgia, serif; font-size: 4rem; line-height: .8; }
-    .about-quote p { margin: .5rem 0 1.2rem; font-family: Georgia, "Noto Serif SC", serif; font-size: 1.2rem; }
+    .about-quote p { margin: .5rem 0 1.2rem; font-family: Georgia, "Times New Roman", serif; font-size: 1.2rem; }
     .about-quote small { color: #c3ccd6; }
     .about-body h3 { margin: 0 0 .7rem; font-size: 1.35rem; }
     .about-body > p { margin: 0 0 1.4rem; color: var(--ink-soft); }
@@ -364,29 +364,29 @@
   </style>
 </head>
 <body>
-  <a class="skip-link" href="#main">跳到主要内容</a>
+  <a class="skip-link" href="#main">Skip to main content</a>
   <header class="site-header">
-    <nav class="container nav-wrap" aria-label="主导航">
-      <a class="brand" href="#home" aria-label="辩论社首页">
-        <span class="brand-mark" aria-hidden="true">辩</span>
-        <span class="brand-name">辩论社<span class="brand-sub">THINK · SPEAK · LISTEN</span></span>
+    <nav class="container nav-wrap" aria-label="Main navigation">
+      <a class="brand" href="#home" aria-label="Debate Club home">
+        <span class="brand-mark" aria-hidden="true">D</span>
+        <span class="brand-name">Debate Club<span class="brand-sub">THINK · SPEAK · LISTEN</span></span>
       </a>
       <ul class="nav-links" id="primary-navigation">
-        <li><a href="#home">首页</a></li>
-        <li><a href="#about">关于我们</a></li>
-        <li><a href="#events">赛事活动</a></li>
-        <li><a href="#members">成员风采</a></li>
-        <li><a href="#honors">荣誉墙</a></li>
-        <li><a href="#knowledge">辩论知识</a></li>
-        <li><a href="#join">招新报名</a></li>
-        <li><a href="#contact">联系我们</a></li>
-        <li><a class="button nav-join" href="#join">现在加入 <span aria-hidden="true">→</span></a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About us</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#members">Members</a></li>
+        <li><a href="#honors">Honors</a></li>
+        <li><a href="#knowledge">Debate knowledge</a></li>
+        <li><a href="#join">Join us</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="button nav-join" href="#join">Join now <span aria-hidden="true">→</span></a></li>
       </ul>
       <div class="nav-actions">
-        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="切换明暗主题" aria-pressed="false">
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle light and dark theme" aria-pressed="false">
           <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20.2 15.2A8.5 8.5 0 0 1 8.8 3.8 8.5 8.5 0 1 0 20.2 15.2Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
         </button>
-        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="打开导航菜单" aria-controls="primary-navigation" aria-expanded="false">
+        <button class="menu-toggle" id="menu-toggle" type="button" aria-label="Open navigation menu" aria-controls="primary-navigation" aria-expanded="false">
           <svg class="icon" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
         </button>
       </div>
@@ -397,16 +397,16 @@
     <section class="hero" id="home" aria-labelledby="hero-title">
       <div class="container hero-grid">
         <div class="hero-copy" data-reveal>
-          <span class="eyebrow">观点交锋 · 思想生长</span>
-          <h1 id="hero-title"><span>【社团口号待补充】</span>辩论社</h1>
-          <p class="hero-lead">在这里，观点被认真倾听，论证经得起追问。我们用清晰表达连接不同视角，在一次次交锋中练习思考、协作与勇气。</p>
-          <p class="hero-note">以上为网站介绍文案，社团口号请在资料确认后替换。</p>
+          <span class="eyebrow">Ideas clash · Thoughts grow</span>
+          <h1 id="hero-title"><span>[Club slogan to be added]</span>Debate Club</h1>
+          <p class="hero-lead">Here, ideas are heard with care and arguments stand up to scrutiny. Through clear expression we connect different perspectives, and in every exchange we practice thinking, collaboration, and courage.</p>
+          <p class="hero-note">The text above is website copy; please replace the club slogan once details are confirmed.</p>
           <div class="hero-cta">
-            <a class="button" href="#join">填写报名表 <span aria-hidden="true">↗</span></a>
-            <a class="button button--outline" href="#about">认识我们</a>
+            <a class="button" href="#join">Fill out the signup form <span aria-hidden="true">↗</span></a>
+            <a class="button button--outline" href="#about">Get to know us</a>
           </div>
         </div>
-        <div class="hero-art" aria-label="象征正反观点平衡的抽象天平图形" role="img" data-reveal>
+        <div class="hero-art" aria-label="Abstract balance graphic symbolizing the balance of opposing views" role="img" data-reveal>
           <div class="orbit" aria-hidden="true"></div>
           <div class="balance" aria-hidden="true">
             <span class="beam"></span><span class="stem"></span><span class="base"></span>
@@ -422,30 +422,30 @@
       <div class="container">
         <div class="section-heading" data-reveal>
           <span class="eyebrow">About us</span>
-          <h2 id="about-title">关于我们</h2>
-          <p>辩论不只是输赢，更是学习如何提出问题、检验论据，并尊重地回应不同的声音。</p>
+          <h2 id="about-title">Who we are</h2>
+          <p>Debate is not just about winning or losing — it is about learning to ask questions, test evidence, and respond to different voices with respect.</p>
         </div>
         <div class="about-grid">
           <blockquote class="about-quote" data-reveal>
             <span class="quote-mark" aria-hidden="true">“</span>
-            <p>好的辩论，不是压过对方的声音，而是让问题变得更清楚。</p>
-            <small>社团理念文案 · 请结合实际宗旨确认</small>
+            <p>A good debate does not drown out the other side — it makes the question clearer.</p>
+            <small>Club philosophy copy · Please confirm against the club's actual mission</small>
           </blockquote>
           <div class="about-body" data-reveal>
-            <h3>以思辨为起点，以表达为桥梁</h3>
-            <p>这里可以介绍社团的成立缘起、训练方式与日常活动。当前尚未收到社团历史和指导信息，以下字段请由社团负责人核实后替换。</p>
+            <h3>Starting from critical thinking, building bridges through expression</h3>
+            <p>This is where you can introduce the club's origins, training approach, and regular activities. No club history or advisor information has been received yet; please have the club lead verify and replace the fields below.</p>
             <dl class="facts">
-              <div class="fact"><dt>所属学校</dt><dd>【学校名称待补充】</dd></div>
-              <div class="fact"><dt>成立时间</dt><dd>【成立时间待补充】</dd></div>
-              <div class="fact"><dt>指导老师</dt><dd>【指导老师待补充】</dd></div>
-              <div class="fact"><dt>社团宗旨</dt><dd>【社团宗旨待确认】</dd></div>
+              <div class="fact"><dt>School</dt><dd>[School name to be added]</dd></div>
+              <div class="fact"><dt>Founded</dt><dd>[Founding date to be added]</dd></div>
+              <div class="fact"><dt>Faculty advisor</dt><dd>[Advisor to be added]</dd></div>
+              <div class="fact"><dt>Mission</dt><dd>[Mission to be confirmed]</dd></div>
             </dl>
           </div>
         </div>
-        <div class="department-list" aria-label="社团部门介绍">
-          <div class="department" data-reveal><strong>辩论训练部</strong><span>【部门职责与负责人待补充】</span></div>
-          <div class="department" data-reveal><strong>赛事活动部</strong><span>【部门职责与负责人待补充】</span></div>
-          <div class="department" data-reveal><strong>宣传联络部</strong><span>【部门职责与负责人待补充】</span></div>
+        <div class="department-list" aria-label="Club departments">
+          <div class="department" data-reveal><strong>Debate Training</strong><span>[Responsibilities and lead to be added]</span></div>
+          <div class="department" data-reveal><strong>Events &amp; Activities</strong><span>[Responsibilities and lead to be added]</span></div>
+          <div class="department" data-reveal><strong>Publicity &amp; Outreach</strong><span>[Responsibilities and lead to be added]</span></div>
         </div>
       </div>
     </section>
@@ -453,63 +453,63 @@
     <section class="section events-section" id="events" aria-labelledby="events-title">
       <div class="container">
         <div class="section-heading" data-reveal>
-          <span class="eyebrow">Events & practice</span>
-          <h2 id="events-title">赛事与活动</h2>
-          <p>从赛场到日常练习，每一次表达都值得记录。具体赛事名称、日期与赛制请以社团实际安排为准。</p>
+          <span class="eyebrow">Events &amp; practice</span>
+          <h2 id="events-title">Events &amp; Activities</h2>
+          <p>From competitions to everyday practice, every expression is worth recording. Please refer to the club's actual schedule for event names, dates, and formats.</p>
         </div>
         <div class="toolbar" data-reveal>
-          <div class="tabs" role="group" aria-label="筛选活动">
-            <button class="tab-button" type="button" data-filter="all" aria-pressed="true">全部活动</button>
-            <button class="tab-button" type="button" data-filter="contest" aria-pressed="false">赛事</button>
-            <button class="tab-button" type="button" data-filter="practice" aria-pressed="false">训练与交流</button>
+          <div class="tabs" role="group" aria-label="Filter events">
+            <button class="tab-button" type="button" data-filter="all" aria-pressed="true">All events</button>
+            <button class="tab-button" type="button" data-filter="contest" aria-pressed="false">Competitions</button>
+            <button class="tab-button" type="button" data-filter="practice" aria-pressed="false">Training &amp; exchange</button>
           </div>
-          <span class="slide-status">活动日历：内容待社团确认</span>
+          <span class="slide-status">Event calendar: content pending club confirmation</span>
         </div>
         <div class="event-grid" id="event-grid">
           <article class="event-card" data-category="contest" data-reveal>
-            <div class="event-cover"><span>TOURNAMENT · 赛事占位</span></div>
+            <div class="event-cover"><span>TOURNAMENT · placeholder</span></div>
             <div class="event-content">
-              <div class="event-meta"><span>【日期待补充】</span><span>【地点待补充】</span></div>
-              <h3>【近期赛事名称待补充】</h3>
-              <p>【赛事简介、报名方式与赛制信息待补充】</p>
+              <div class="event-meta"><span>[Date to be added]</span><span>[Location to be added]</span></div>
+              <h3>[Upcoming event name to be added]</h3>
+              <p>[Event description, registration method, and format to be added]</p>
             </div>
           </article>
           <article class="event-card" data-category="practice" data-reveal>
-            <div class="event-cover event-cover--red"><span>PRACTICE · 活动占位</span></div>
+            <div class="event-cover event-cover--red"><span>PRACTICE · placeholder</span></div>
             <div class="event-content">
-              <div class="event-meta"><span>【日期待补充】</span><span>【地点待补充】</span></div>
-              <h3>【辩题工作坊/日常训练待补充】</h3>
-              <p>可在此介绍训练主题、参与对象与预约方式，发布前请替换占位内容。</p>
+              <div class="event-meta"><span>[Date to be added]</span><span>[Location to be added]</span></div>
+              <h3>[Debate workshop / regular training to be added]</h3>
+              <p>Describe the training topic, who can join, and how to sign up here; replace this placeholder content before publishing.</p>
             </div>
           </article>
           <article class="event-card" data-category="practice" data-reveal>
-            <div class="event-cover event-cover--blue"><span>OPEN MIC · 活动占位</span></div>
+            <div class="event-cover event-cover--blue"><span>OPEN MIC · placeholder</span></div>
             <div class="event-content">
-              <div class="event-meta"><span>【日期待补充】</span><span>【地点待补充】</span></div>
-              <h3>【公开交流活动名称待补充】</h3>
-              <p>记录观点交流、主题分享或新成员体验活动。活动安排以实际通知为准。</p>
+              <div class="event-meta"><span>[Date to be added]</span><span>[Location to be added]</span></div>
+              <h3>[Open exchange event name to be added]</h3>
+              <p>Record idea exchanges, topic sharing sessions, or newcomer experience events. Actual arrangements are subject to official notices.</p>
             </div>
           </article>
         </div>
-        <div class="schedule" aria-label="活动日历占位信息" data-reveal>
-          <div class="schedule-item"><strong>每周训练</strong>【星期与时间待补充】</div>
-          <div class="schedule-item"><strong>近期赛事</strong>【赛事日期待补充】</div>
-          <div class="schedule-item"><strong>赛制介绍</strong>【本社常用赛制待补充】</div>
+        <div class="schedule" aria-label="Placeholder event calendar information" data-reveal>
+          <div class="schedule-item"><strong>Weekly training</strong>[Day and time to be added]</div>
+          <div class="schedule-item"><strong>Upcoming events</strong>[Event date to be added]</div>
+          <div class="schedule-item"><strong>Format overview</strong>[Common formats used by the club to be added]</div>
         </div>
         <div class="gallery" aria-labelledby="gallery-title" data-reveal>
           <div class="gallery-head">
-            <div><span class="eyebrow">Moments</span><h3 id="gallery-title">活动照片墙</h3></div>
+            <div><span class="eyebrow">Moments</span><h3 id="gallery-title">Activity photo wall</h3></div>
             <div class="gallery-controls">
-              <button class="round-button" id="gallery-prev" type="button" aria-label="查看上一张活动图片">←</button>
-              <button class="round-button" id="gallery-next" type="button" aria-label="查看下一张活动图片">→</button>
+              <button class="round-button" id="gallery-prev" type="button" aria-label="View previous event photo">←</button>
+              <button class="round-button" id="gallery-next" type="button" aria-label="View next event photo">→</button>
             </div>
           </div>
           <div class="gallery-slide" aria-live="polite" aria-atomic="true">
-            <div class="gallery-art" id="gallery-art" role="img" aria-label="活动照片占位图，请替换为社团授权照片"><span>活动照片占位 · 01</span></div>
+            <div class="gallery-art" id="gallery-art" role="img" aria-label="Event photo placeholder; replace with an authorized club photo"><span>Event photo placeholder · 01</span></div>
             <div class="gallery-caption">
-              <span class="eyebrow">社团记忆</span>
-              <h3 id="gallery-caption-title">【活动照片说明待补充】</h3>
-              <p id="gallery-caption-text">这里可放置经社团成员授权的训练、赛事与交流活动照片。发布前请替换占位图并填写图片替代文本。</p>
+              <span class="eyebrow">Club memories</span>
+              <h3 id="gallery-caption-title">[Photo caption to be added]</h3>
+              <p id="gallery-caption-text">Place training, competition, and exchange photos authorized by club members here. Replace the placeholder image and fill in the alt text before publishing.</p>
               <span class="slide-status" id="gallery-status">1 / 3</span>
             </div>
           </div>
@@ -520,25 +520,25 @@
     <section class="section members-section" id="members" aria-labelledby="members-title">
       <div class="container">
         <div class="section-heading" data-reveal>
-          <span class="eyebrow">People & voices</span>
-          <h2 id="members-title">成员风采</h2>
-          <p>每位成员都有独特的思考路径。成员姓名、照片与经历尚未提供，以下均为可替换的资料模板。</p>
+          <span class="eyebrow">People &amp; voices</span>
+          <h2 id="members-title">Members</h2>
+          <p>Every member has a unique way of thinking. Member names, photos, and backgrounds have not been provided, so everything below is a replaceable template.</p>
         </div>
         <div class="member-grid">
-          <button class="member-card" type="button" data-name="【队长姓名待补充】" data-role="队长 / 召集与组织" data-bio="【成员经历、负责内容与寄语待补充】" data-reveal>
-            <span class="avatar" aria-hidden="true">队</span><span class="member-role">TEAM LEAD</span>
-            <strong>【队长姓名待补充】</strong><p>【个人简介待补充】</p><span class="member-more">查看成员介绍 →</span>
+          <button class="member-card" type="button" data-name="[Team lead name to be added]" data-role="Team Lead / Coordination &amp; Organization" data-bio="[Member background, responsibilities, and message to be added]" data-reveal>
+            <span class="avatar" aria-hidden="true">L</span><span class="member-role">TEAM LEAD</span>
+            <strong>[Team lead name to be added]</strong><p>[Profile to be added]</p><span class="member-more">View member profile →</span>
           </button>
-          <button class="member-card" type="button" data-name="【辩手姓名待补充】" data-role="辩手 / 论证与表达" data-bio="【成员经历、擅长领域与寄语待补充】" data-reveal>
-            <span class="avatar" aria-hidden="true">辩</span><span class="member-role">SPEAKER</span>
-            <strong>【辩手姓名待补充】</strong><p>【个人简介待补充】</p><span class="member-more">查看成员介绍 →</span>
+          <button class="member-card" type="button" data-name="[Debater name to be added]" data-role="Debater / Argument &amp; Expression" data-bio="[Member background, strengths, and message to be added]" data-reveal>
+            <span class="avatar" aria-hidden="true">S</span><span class="member-role">SPEAKER</span>
+            <strong>[Debater name to be added]</strong><p>[Profile to be added]</p><span class="member-more">View member profile →</span>
           </button>
-          <button class="member-card" type="button" data-name="【教练/顾问姓名待补充】" data-role="教练 / 指导与反馈" data-bio="【指导经历、擅长领域与寄语待补充】" data-reveal>
-            <span class="avatar" aria-hidden="true">师</span><span class="member-role">COACH / ADVISOR</span>
-            <strong>【教练/顾问姓名待补充】</strong><p>【个人简介待补充】</p><span class="member-more">查看成员介绍 →</span>
+          <button class="member-card" type="button" data-name="[Coach/Advisor name to be added]" data-role="Coach / Guidance &amp; Feedback" data-bio="[Guidance background, strengths, and message to be added]" data-reveal>
+            <span class="avatar" aria-hidden="true">C</span><span class="member-role">COACH / ADVISOR</span>
+            <strong>[Coach/Advisor name to be added]</strong><p>[Profile to be added]</p><span class="member-more">View member profile →</span>
           </button>
         </div>
-        <p class="member-disclaimer">成员信息上线前，请取得本人同意；请替换姓名、介绍和图片占位内容。</p>
+        <p class="member-disclaimer">Before publishing, obtain each member's consent and replace all placeholder names, profiles, and images.</p>
       </div>
     </section>
 
@@ -546,20 +546,20 @@
       <div class="container">
         <div class="section-heading" data-reveal>
           <span class="eyebrow">Milestones</span>
-          <h2 id="honors-title">荣誉与成长</h2>
-          <p>荣誉记录应准确可核验。当前没有收到获奖信息，因此此处全部保留为待补充字段。</p>
+          <h2 id="honors-title">Honors &amp; Growth</h2>
+          <p>Honor records must be accurate and verifiable. No award information has been received, so all fields here remain placeholders.</p>
         </div>
         <div class="honors-grid">
-          <div class="stat-panel" aria-label="社团成绩统计" data-reveal>
-            <div class="stat"><strong>【待补充】</strong><span>赛事获奖</span></div>
-            <div class="stat"><strong>【待补充】</strong><span>参赛届数</span></div>
-            <div class="stat"><strong>【待补充】</strong><span>活跃成员</span></div>
-            <div class="stat"><strong>【待补充】</strong><span>训练场次</span></div>
+          <div class="stat-panel" aria-label="Club achievement statistics" data-reveal>
+            <div class="stat"><strong>[To be added]</strong><span>Competition awards</span></div>
+            <div class="stat"><strong>[To be added]</strong><span>Editions entered</span></div>
+            <div class="stat"><strong>[To be added]</strong><span>Active members</span></div>
+            <div class="stat"><strong>[To be added]</strong><span>Training sessions</span></div>
           </div>
-          <div class="timeline" aria-label="获奖时间线">
-            <article class="timeline-item" data-reveal><time>【年份待补充】</time><h3>【赛事及奖项名称待补充】</h3><p>【获奖队伍、组别与主办方待补充】</p></article>
-            <article class="timeline-item" data-reveal><time>【年份待补充】</time><h3>【赛事及奖项名称待补充】</h3><p>【获奖队伍、组别与主办方待补充】</p></article>
-            <article class="timeline-item" data-reveal><time>【年份待补充】</time><h3>【社团里程碑待补充】</h3><p>【请填写可核实的社团发展记录】</p></article>
+          <div class="timeline" aria-label="Award timeline">
+            <article class="timeline-item" data-reveal><time>[Year to be added]</time><h3>[Competition and award name to be added]</h3><p>[Winning team, division, and organizer to be added]</p></article>
+            <article class="timeline-item" data-reveal><time>[Year to be added]</time><h3>[Competition and award name to be added]</h3><p>[Winning team, division, and organizer to be added]</p></article>
+            <article class="timeline-item" data-reveal><time>[Year to be added]</time><h3>[Club milestone to be added]</h3><p>[Please add a verifiable club development record]</p></article>
           </div>
         </div>
       </div>
@@ -569,26 +569,26 @@
       <div class="container">
         <div class="section-heading" data-reveal>
           <span class="eyebrow">Debate toolkit</span>
-          <h2 id="knowledge-title">辩论知识</h2>
-          <p>从基本概念开始，逐步建立论证、倾听与回应的习惯。具体赛制请以赛事规程为准。</p>
+          <h2 id="knowledge-title">Debate Knowledge</h2>
+          <p>Start with the basics and gradually build habits of arguing, listening, and responding. Refer to the competition rules for specific formats.</p>
         </div>
         <div class="knowledge-grid">
           <article class="knowledge-card" data-reveal>
-            <h3>辩论常用术语</h3>
+            <h3>Common debate terms</h3>
             <dl class="term-list">
-              <div class="term"><dt>立论</dt><dd>围绕己方观点搭建清晰论证，交代定义、标准、理由与推导过程。</dd></div>
-              <div class="term"><dt>质询</dt><dd>通过有针对性的问题检验论证前提，澄清分歧，而非单纯追求提问数量。</dd></div>
-              <div class="term"><dt>攻防</dt><dd>回应对方论点、维护己方论证，并解释争点为何影响最终判断。</dd></div>
-              <div class="term"><dt>结辩</dt><dd>归纳关键争议与比较标准，说明己方论证如何支持结论。</dd></div>
+              <div class="term"><dt>Case</dt><dd>Build a clear argument around your side's position, setting out definitions, criteria, reasoning, and the logic that connects them.</dd></div>
+              <div class="term"><dt>Cross-examination</dt><dd>Test the premises of an argument with targeted questions and clarify disagreements, rather than simply asking more questions.</dd></div>
+              <div class="term"><dt>Attack &amp; defense</dt><dd>Respond to the other side's arguments, defend your own case, and explain why the clash matters to the final judgment.</dd></div>
+              <div class="term"><dt>Closing statement</dt><dd>Summarize the key disputes and comparison criteria, and explain how your case supports the conclusion.</dd></div>
             </dl>
           </article>
           <div data-reveal>
-            <h3>常见问题 FAQ</h3>
+            <h3>Frequently asked questions</h3>
             <div class="faq-list">
-              <details><summary>没有辩论经验，可以报名吗？</summary><p>可以。是否有经验并非本表单设定的限制；招新要求和选拔安排请以社团负责人补充的规则为准。</p></details>
-              <details><summary>辩论训练通常会练什么？</summary><p>通常可包含资料搜集、论证搭建、表达与倾听、质询回应和复盘；本社训练安排尚待确认。</p></details>
-              <details><summary>一定要成为辩手才能加入吗？</summary><p>社团也可能有赛事组织、宣传或研究等参与方式。具体部门与招募岗位请填写真实安排。</p></details>
-              <details><summary>报名后如何联系我？</summary><p>报名资料会提交至本网站所连接的服务端，社团负责人需按实际流程联系报名者。请先确认联系方式填写准确。</p></details>
+              <details><summary>Can I sign up with no debate experience?</summary><p>Yes. Experience is not a restriction set by this form; refer to the rules added by the club lead for recruitment requirements and selection arrangements.</p></details>
+              <details><summary>What do debate training sessions usually cover?</summary><p>They may include research, building arguments, expression and listening, responding to cross-examination, and review; the club's training schedule is still to be confirmed.</p></details>
+              <details><summary>Do I have to be a debater to join?</summary><p>The club may also offer event organizing, publicity, or research roles. Fill in the real arrangements for departments and open positions.</p></details>
+              <details><summary>How will you contact me after I sign up?</summary><p>Your signup information is submitted to the server connected to this website, and the club lead must contact applicants through the actual process. Please make sure your contact details are correct.</p></details>
             </div>
           </div>
         </div>
@@ -599,55 +599,55 @@
       <div class="container">
         <div class="section-heading" data-reveal>
           <span class="eyebrow">Join the conversation</span>
-          <h2 id="join-title">把你的想法带来</h2>
-          <p>认真倾听、好奇提问、愿意表达——从这里迈出第一步。以下报名规则须由社团按实际情况核实。</p>
+          <h2 id="join-title">Bring your ideas</h2>
+          <p>Listen carefully, ask with curiosity, and be willing to speak up — take the first step here. The signup rules below must be verified by the club against its actual situation.</p>
         </div>
         <div class="join-grid">
           <aside class="join-aside" data-reveal>
-            <h3>招新信息</h3>
-            <p><strong>报名条件：</strong>【招新对象与条件待补充】</p>
-            <p><strong>报名时间：</strong>【报名起止日期待补充】</p>
-            <h3>加入流程</h3>
+            <h3>Recruitment information</h3>
+            <p><strong>Eligibility:</strong> [Applicants and requirements to be added]</p>
+            <p><strong>Signup period:</strong> [Start and end dates to be added]</p>
+            <h3>How to join</h3>
             <ol>
-              <li>提交报名信息</li>
-              <li>【面谈/体验活动安排待补充】</li>
-              <li>【录取与入社通知方式待补充】</li>
+              <li>Submit your signup information</li>
+              <li>[Interview / trial session arrangements to be added]</li>
+              <li>[Admission and notification method to be added]</li>
             </ol>
-            <p class="privacy-note">提交后，姓名、年级、联系方式、意向辩位和自我介绍将发送到本网站配置的服务器并保存于 SQLite 数据库，用于招新联系。请勿填写无关敏感信息。正式上线前请补充明确的数据保留期限与隐私联系人。</p>
+            <p class="privacy-note">After submission, your name, grade, contact details, preferred position, and introduction are sent to the server configured for this website and stored in a SQLite database for recruitment contact. Please do not enter unrelated sensitive information. Add a clear data retention period and privacy contact before going live.</p>
           </aside>
           <form class="signup-form" id="signup-form" action="/api/signups" method="post" data-reveal>
             <div class="field">
-              <label for="fullName">姓名 <span aria-hidden="true">*</span></label>
+              <label for="fullName">Full name <span aria-hidden="true">*</span></label>
               <input id="fullName" name="fullName" type="text" autocomplete="name" minlength="2" maxlength="40" required>
             </div>
             <div class="field">
-              <label for="grade">年级 <span aria-hidden="true">*</span></label>
-              <input id="grade" name="grade" type="text" autocomplete="off" maxlength="40" placeholder="例如：高一 / 大一" required>
+              <label for="grade">Grade <span aria-hidden="true">*</span></label>
+              <input id="grade" name="grade" type="text" autocomplete="off" maxlength="40" placeholder="e.g. Grade 10 / Freshman" required>
             </div>
             <div class="field">
-              <label for="phone">联系方式 <span aria-hidden="true">*</span></label>
+              <label for="phone">Contact number <span aria-hidden="true">*</span></label>
               <input id="phone" name="phone" type="tel" autocomplete="tel" minlength="6" maxlength="30" required>
-              <span class="field-hint">请填写可联系到你的手机号或其他电话。</span>
+              <span class="field-hint">Enter a mobile number or other phone number we can reach you at.</span>
             </div>
             <div class="field">
-              <label for="position">意向辩位 <span aria-hidden="true">*</span></label>
+              <label for="position">Preferred position <span aria-hidden="true">*</span></label>
               <select id="position" name="position" required>
-                <option value="">请选择</option>
-                <option value="一辩">一辩</option><option value="二辩">二辩</option>
-                <option value="三辩">三辩</option><option value="四辩">四辩</option>
-                <option value="尚未确定">尚未确定</option><option value="其他">其他</option>
+                <option value="">Please select</option>
+                <option value="First speaker">First speaker</option><option value="Second speaker">Second speaker</option>
+                <option value="Third speaker">Third speaker</option><option value="Fourth speaker">Fourth speaker</option>
+                <option value="Undecided">Undecided</option><option value="Other">Other</option>
               </select>
             </div>
             <div class="field field--full">
-              <label for="introduction">自我介绍 <span aria-hidden="true">*</span></label>
-              <textarea id="introduction" name="introduction" minlength="10" maxlength="1000" required placeholder="简单介绍你的兴趣、经历或想加入辩论社的原因（10–1000 字）"></textarea>
-              <span class="field-hint">请勿填写身份证号、家庭住址等无关敏感信息。</span>
+              <label for="introduction">Self-introduction <span aria-hidden="true">*</span></label>
+              <textarea id="introduction" name="introduction" minlength="10" maxlength="1000" required placeholder="Briefly describe your interests, experience, or why you want to join the debate club (10–1000 characters)"></textarea>
+              <span class="field-hint">Do not enter unrelated sensitive information such as your ID number or home address.</span>
             </div>
             <div class="honeypot" aria-hidden="true">
-              <label for="website">请勿填写此项</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+              <label for="website">Do not fill in this field</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
             </div>
             <div class="form-footer">
-              <button class="button" id="submit-button" type="submit">提交报名 <span aria-hidden="true">→</span></button>
+              <button class="button" id="submit-button" type="submit">Submit signup <span aria-hidden="true">→</span></button>
               <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
             </div>
           </form>
@@ -659,14 +659,14 @@
       <div class="container">
         <div class="section-heading" data-reveal>
           <span class="eyebrow">Get in touch</span>
-          <h2 id="contact-title">联系我们</h2>
-          <p>欢迎咨询活动与招新信息。社交账号和线下地址请由社团负责人确认后补充。</p>
+          <h2 id="contact-title">Contact us</h2>
+          <p>Feel free to ask about events and recruitment. Social accounts and the offline address will be added once confirmed by the club lead.</p>
         </div>
         <div class="contact-grid">
-          <article class="contact-card" data-reveal><h3>电话联系</h3><p><a href="tel:13511844801">13511844801</a></p><p class="field-hint">社团联系电话（用户提供）</p></article>
-          <article class="contact-card" data-reveal><h3>电子邮箱</h3><p>【社团邮箱待补充】</p></article>
-          <article class="contact-card" data-reveal><h3>微信公众号 / QQ 群</h3><p>【公众号名称与二维码待补充】</p><p>【QQ群号与入群方式待补充】</p></article>
-          <article class="contact-card" data-reveal><h3>活动地址</h3><p>【学校、校区与活动地点待补充】</p><p>【社交媒体账号待补充】</p></article>
+          <article class="contact-card" data-reveal><h3>Phone</h3><p><a href="tel:13511844801">13511844801</a></p><p class="field-hint">Club contact number (provided by user)</p></article>
+          <article class="contact-card" data-reveal><h3>Email</h3><p>[Club email to be added]</p></article>
+          <article class="contact-card" data-reveal><h3>WeChat / QQ group</h3><p>[Account name and QR code to be added]</p><p>[QQ group number and how to join to be added]</p></article>
+          <article class="contact-card" data-reveal><h3>Location</h3><p>[School, campus, and event venue to be added]</p><p>[Social media accounts to be added]</p></article>
         </div>
       </div>
     </section>
@@ -675,21 +675,21 @@
   <footer class="footer">
     <div class="container footer-grid">
       <div>
-        <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">辩</span><span class="brand-name">辩论社<span class="brand-sub">THINK · SPEAK · LISTEN</span></span></a>
-        <p>© <span id="copyright-year">2026</span> 辩论社 ·【学校名称待补充】</p>
-        <small>备案信息：【备案号待补充；如适用请按要求登记】</small>
+        <a class="brand" href="#home"><span class="brand-mark" aria-hidden="true">D</span><span class="brand-name">Debate Club<span class="brand-sub">THINK · SPEAK · LISTEN</span></span></a>
+        <p>© <span id="copyright-year">2026</span> Debate Club · [School name to be added]</p>
+        <small>Registration info: [Filing number to be added; register as required if applicable]</small>
       </div>
-      <nav class="footer-links" aria-label="页脚快速链接">
-        <a href="#about">关于我们</a><a href="#events">赛事活动</a><a href="#knowledge">辩论知识</a><a href="#join">加入我们</a><a href="#contact">联系我们</a>
+      <nav class="footer-links" aria-label="Footer quick links">
+        <a href="#about">About us</a><a href="#events">Events</a><a href="#knowledge">Debate knowledge</a><a href="#join">Join us</a><a href="#contact">Contact us</a>
       </nav>
     </div>
   </footer>
 
   <dialog id="member-dialog" aria-labelledby="dialog-name">
     <div class="dialog-body">
-      <button class="dialog-close" id="dialog-close" type="button" aria-label="关闭成员介绍">×</button>
-      <span class="eyebrow" id="dialog-role">成员介绍</span>
-      <h2 id="dialog-name">成员姓名</h2>
+      <button class="dialog-close" id="dialog-close" type="button" aria-label="Close member profile">×</button>
+      <span class="eyebrow" id="dialog-role">Member profile</span>
+      <h2 id="dialog-name">Member name</h2>
       <p id="dialog-bio"></p>
     </div>
   </dialog>
@@ -705,13 +705,13 @@
     function closeMenu() {
       navigation.classList.remove("is-open");
       menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.setAttribute("aria-label", "打开导航菜单");
+      menuToggle.setAttribute("aria-label", "Open navigation menu");
     }
 
     menuToggle.addEventListener("click", () => {
       const isOpen = menuToggle.getAttribute("aria-expanded") === "true";
       menuToggle.setAttribute("aria-expanded", String(!isOpen));
-      menuToggle.setAttribute("aria-label", isOpen ? "打开导航菜单" : "关闭导航菜单");
+      menuToggle.setAttribute("aria-label", isOpen ? "Open navigation menu" : "Close navigation menu");
       navigation.classList.toggle("is-open", !isOpen);
     });
     navLinks.forEach((link) => link.addEventListener("click", closeMenu));
@@ -751,7 +751,7 @@
       const button = event.currentTarget;
       const isDark = document.documentElement.classList.toggle("theme-dark");
       button.setAttribute("aria-pressed", String(isDark));
-      button.setAttribute("aria-label", isDark ? "切换到浅色主题" : "切换到深色主题");
+      button.setAttribute("aria-label", isDark ? "Switch to light theme" : "Switch to dark theme");
     });
     document.querySelector("#copyright-year").textContent = String(new Date().getFullYear());
 
@@ -766,9 +766,9 @@
     });
 
     const gallerySlides = [
-      { title: "【活动照片说明待补充】", text: "请替换为经授权的辩论训练或活动照片，并补充准确的图片说明。", className: "", label: "活动照片占位图，请替换为社团授权照片" },
-      { title: "【赛事照片说明待补充】", text: "可展示赛场瞬间、备赛过程或团队合影；上线前请确认照片中的成员同意公开。", className: "gallery-art--warm", label: "赛事照片占位图，请替换为社团授权照片" },
-      { title: "【交流活动照片说明待补充】", text: "请将此处替换为真实活动图及文字说明，不要将装饰图误作真实活动记录。", className: "gallery-art--gold", label: "交流活动照片占位图，请替换为社团授权照片" }
+      { title: "[Photo caption to be added]", text: "Replace this with an authorized debate training or event photo, and add an accurate caption.", className: "", label: "Event photo placeholder; replace with an authorized club photo" },
+      { title: "[Competition photo caption to be added]", text: "You can show competition moments, preparation, or team photos; confirm that members in the photos consent to publication before going live.", className: "gallery-art--warm", label: "Competition photo placeholder; replace with an authorized club photo" },
+      { title: "[Exchange event photo caption to be added]", text: "Replace this with a real event photo and caption; do not mistake decorative graphics for real event records.", className: "gallery-art--gold", label: "Exchange event photo placeholder; replace with an authorized club photo" }
     ];
     let currentSlide = 0;
     function showGallerySlide(index) {
@@ -777,7 +777,7 @@
       const artwork = document.querySelector("#gallery-art");
       artwork.className = `gallery-art ${slide.className}`.trim();
       artwork.setAttribute("aria-label", slide.label);
-      artwork.querySelector("span").textContent = `活动照片占位 · 0${currentSlide + 1}`;
+      artwork.querySelector("span").textContent = `Event photo placeholder · 0${currentSlide + 1}`;
       document.querySelector("#gallery-caption-title").textContent = slide.title;
       document.querySelector("#gallery-caption-text").textContent = slide.text;
       document.querySelector("#gallery-status").textContent = `${currentSlide + 1} / ${gallerySlides.length}`;
@@ -808,7 +808,7 @@
 
     phoneInput.addEventListener("input", () => {
       const digits = phoneInput.value.replace(/\D/g, "");
-      phoneInput.setCustomValidity(digits.length >= 6 && digits.length <= 20 ? "" : "请填写有效的电话号码。");
+      phoneInput.setCustomValidity(digits.length >= 6 && digits.length <= 20 ? "" : "Please enter a valid phone number.");
     });
 
     signupForm.addEventListener("submit", async (event) => {
@@ -817,7 +817,7 @@
       if (!signupForm.reportValidity()) return;
 
       submitButton.disabled = true;
-      submitButton.textContent = "正在提交…";
+      submitButton.textContent = "Submitting…";
       const formData = new FormData(signupForm);
       const payload = Object.fromEntries(formData.entries());
       try {
@@ -828,18 +828,18 @@
         });
         const result = await response.json();
         if (!response.ok) {
-          setFormStatus(result.error || "提交未成功，请检查信息后重试。", "error");
+          setFormStatus(result.error || "Submission failed. Please check your information and try again.", "error");
           return;
         }
         signupForm.reset();
         phoneInput.setCustomValidity("");
-        setFormStatus("报名信息已提交。社团负责人将按招新安排与你联系。", "success");
+        setFormStatus("Your signup has been submitted. The club lead will contact you following the recruitment schedule.", "success");
       } catch (error) {
-        setFormStatus("暂时无法连接报名服务器，请稍后重试或通过电话联系社团。", "error");
-        console.error("报名提交请求失败。", error);
+        setFormStatus("Unable to reach the signup server right now. Please try again later or contact the club by phone.", "error");
+        console.error("Signup submission request failed.", error);
       } finally {
         submitButton.disabled = false;
-        submitButton.innerHTML = '提交报名 <span aria-hidden="true">→</span>';
+        submitButton.innerHTML = 'Submit signup <span aria-hidden="true">→</span>';
       }
     });
   </script>
